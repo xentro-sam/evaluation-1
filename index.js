@@ -36,6 +36,7 @@ function score(rolls) {
       score += currentRoll + rolls[index + 1] + rolls[index + 2];
       if(countFrames === 10) index++;
     }
+    countFrames++;
     index += 2;
   }
 
@@ -43,7 +44,7 @@ function score(rolls) {
 }
 
 function bestScore(games) {
-  const numberOfGames = games.size();
+  const numberOfGames = games.length;
   let best = 0;
   try {
     for(let game = 0; game < numberOfGames; game++) {
