@@ -40,6 +40,9 @@ function score(rolls) {
     index += 2;
   }
 
+  if(countFrames < 10) {
+    throw new Error('Rolls have less than 10 frames');
+  }
   return score;
 }
 
